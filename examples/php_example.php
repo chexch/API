@@ -7,10 +7,10 @@
     // All available for e-currency exchange
     
     $currencies = RequestAPI($api_url, array(
-        'type' => 'currencies',
+        'type' => 'currencies', // API method
         'key' => $api_key,
-        'format' => 'json',
-        'lang' => 'en'
+        'format' => 'json',     // Format receive data (xml or json). If not specified, the default json
+        'lang' => 'en'          // Language retrieve data, "ru" - Russian, "en" - English, "ch" - Chinese
     ));
     
     print($currencies);
@@ -19,11 +19,11 @@
     // List of currencies that you can obtain when you exchange any currency
     
     $available_currencies_from = RequestAPI($api_url, array(
-        'type' => 'available_currencies',
-        'from' => 'PRUSD',
+        'type' => 'available_currencies', // API method
+        'from' => 'PRUSD',                // The currency you give
         'key' => $api_key,
-        'format' => 'xml',
-        'lang' => 'en'
+        'format' => 'xml',                // Format receive data (xml or json). If not specified, the default json
+        'lang' => 'en'                    // Language retrieve data, "ru" - Russian, "en" - English, "ch" - Chinese
     ));
     
     print($available_currencies_from);
@@ -32,11 +32,11 @@
     // List of currencies that can be given to obtain any currency
     
     $available_currencies_to = RequestAPI($api_url, array(
-        'type' => 'available_currencies',
-        'to' => 'OKRUB',
+        'type' => 'available_currencies', // API method
+        'to' => 'OKRUB',                  // The currency you will receive
         'key' => $api_key,
-        'format' => 'json',
-        'lang' => 'ru'
+        'format' => 'json',               // Format receive data (xml or json). If not specified, the default json
+        'lang' => 'ru'                    // Language retrieve data, "ru" - Russian, "en" - English, "ch" - Chinese
     ));
     
     print($available_currencies_to);
@@ -45,12 +45,12 @@
     // All exchange rates (e.g. PRUSD at OKRUB)
     
     $rates = RequestAPI($api_url, array(
-        'type' => 'rates',
-        'from' => 'PRUSD',
-        'to' => 'OKRUB',
+        'type' => 'rates', // API method
+        'from' => 'PRUSD', // The currency you give
+        'to' => 'OKRUB',   // The currency you will receive
         'key' => $api_key,
-        'format' => 'xml',
-        'lang' => 'ru'
+        'format' => 'xml', // Format receive data (xml or json). If not specified, the default json
+        'lang' => 'ru'     // Language retrieve data, "ru" - Russian, "en" - English, "ch" - Chinese
     ));
     
     print($rates);
@@ -79,7 +79,6 @@
         curl_setopt($connect, CURLOPT_RETURNTRANSFER, 1);
         
         $response = curl_exec($connect);
-        
         curl_close($connect);
         
         return $response;
