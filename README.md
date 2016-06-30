@@ -66,4 +66,4 @@ API доступ для мониторингов и управление отз�
 </table></li>
 </ul>
 
-Примеры запросов к API можно посмотреть здесь <a href="/chexch/API-chexch.com/tree/master/examples">examples</a>.
+Примеры запросов к API можно посмотреть здесь <a href="https://github.com/chexch/API-chexch.com/tree/master/examples">examples</a>.
