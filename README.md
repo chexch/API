@@ -67,5 +67,5 @@ API доступ для мониторингов и управление отз�
 </ul>
 
 Примеры запросов к API можно посмотреть здесь <a href="https://github.com/chexch/API-chexch.com/tree/master/examples">examples</a>.
-Видео о том как получить API доступ, а также управлять отзывами на сайте chexch.com
-<iframe width="560" height="315" src="https://www.youtube.com/embed/g4aOex5FF5I" frameborder="0" allowfullscreen></iframe>
+<br/>
+Видео о том как получить API доступ, а также управлять отзывами на сайте chexch.com <a href="https://youtu.be/g4aOex5FF5I">youtu.be/g4aOex5FF5I</a>.
